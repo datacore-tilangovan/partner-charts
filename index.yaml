@@ -3602,6 +3602,29 @@ entries:
     urls:
     - assets/loft/loft-2.2.101.tgz
     version: 2.2.101
+  mayastor:
+  - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2022-09-04T06:17:31.224016962-04:00"
+    dependencies:
+    - name: etcd
+      repository: file://./charts/etcd
+      tags:
+      - bitnami-etcd
+    - condition: base.jaeger.enabled
+      name: jaeger-operator
+      repository: file://./charts/jaeger-operator
+    - condition: loki-stack.enabled
+      name: loki-stack
+      repository: file://./charts/loki-stack
+    description: Openebs Mayastor Helm chart for Kubernetes
+    digest: 2d52e3d65b6fa674ea381f0ddc6871a62966987773eb6c8499c3218002b3e37e
+    icon: https://raw.githubusercontent.com/cncf/artwork/HEAD/projects/openebs/icon/color/openebs-icon-color.png
+    name: mayastor
+    type: application
+    urls:
+    - assets/openebs-mayastor/mayastor-1.0.0.tgz
+    version: 1.0.0
   minio-operator:
   - annotations:
       catalog.cattle.io/certified: partner
